@@ -4,8 +4,6 @@
 } */
 body{
     background-color:black;
-    margin: 0;
-    width: 100%;
 }
 .error{
     margin-top:80px;
@@ -32,9 +30,7 @@ nav img{
 .navbar-brand:hover{
     color: orangered;
 }
-.navbar-nav{
-    margin: auto;
-}
+
 .navbar-nav .nav-item .nav-link {
     color: orangered;
     text-shadow: 1px 1px 3px white;
@@ -54,10 +50,10 @@ nav img{
     color: white;
 }
 .herotext h3{
-    font-size: 70px;
+    font-size: 50px;
 }
 .herotext{
-    font-size: 50px;
+    font-size: 40px;
     text-shadow: 2px 2px 2px orangered;
 }
 .heroimg img{
@@ -105,7 +101,7 @@ nav img{
 }
 .countdown{
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .last a{
