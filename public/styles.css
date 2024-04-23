@@ -1,0 +1,221 @@
+
+/* .all{
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(23, 22, 22, 0.384)), black;
+} */
+body{
+    background-color:black;
+    margin: 0;
+    width: 100%;
+}
+.error{
+    margin-top:80px;
+    z-index: 9999;
+}
+.email{
+    color: whitesmoke;
+}
+nav img{
+    width: 40px;
+}
+.navs{
+    background-color: black;
+}
+.navbar-brand {
+    border-radius: 100%;
+    font-size: 20px;
+    color: whitesmoke;
+}
+.navside{
+    border-bottom: 2px solid white;
+    background-color: black;
+}
+.navbar-brand:hover{
+    color: orangered;
+}
+.navbar-nav{
+    margin: auto;
+}
+.navbar-nav .nav-item .nav-link {
+    color: orangered;
+    text-shadow: 1px 1px 3px white;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 50px;
+}
+.navbar button{
+    background-color: whitesmoke;
+    color: orangered;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.hero{
+    margin-top: 150px;
+    color: white;
+}
+.herotext h3{
+    font-size: 70px;
+}
+.herotext{
+    font-size: 50px;
+    text-shadow: 2px 2px 2px orangered;
+}
+.heroimg img{
+   width: 600px;
+   /* box-shadow: 2px 2px 2px 2px orangered; */
+}
+.claim{
+    margin-top: 10px;
+}
+.claim input{
+    width: 80%;
+    border: none;
+    border-radius: 4px;
+}
+.claim button{
+    width: 15%;
+    border: none;
+    border-radius: 4px;
+    background-color: orangered;
+    color: whitesmoke;
+    font-weight: 600;
+}
+.hero .fa-r-project{
+    color: orangered;
+    font-size: 300px;
+}
+.hero .row{
+    margin-top: 80px;
+}
+
+.hero .row .col-md-6 b{
+    color: orangered;
+}
+.imagesec .row{
+    padding: 20px;
+}
+.imagesec .link{
+    text-decoration: none;
+    color:whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+    
+}
+.countdown{
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.last a{
+    text-decoration: none;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.main .imagesec img{
+    border-radius: 50px;
+}
+.main .imagesec{
+    border-radius: 50px;
+    box-shadow: 2px 2px 60000px 100px orangered;
+}
+.main .imagesec p{
+   padding: 20px ;
+   font-size: 20px;
+}
+.tweet{
+    border: none;
+    background-color: whitesmoke;
+    color: orangered;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.tweet:hover{
+    background-color: whitesmoke;
+    color: orangered;
+    border: 1px solid orangered;
+}
+.allcards{
+    margin: auto;
+}
+.cards{
+    border-radius: 20px;
+    font-weight: 500;
+    height: 300px;
+    padding: 20px;
+    width: 340px;
+    margin: 10px;
+    font-size: 19px;
+}
+.cards h1{
+    font-weight: bold;
+}
+.cards p{
+    margin-top: 40px;
+}
+.first{
+    background: linear-gradient(rgb(253, 229, 73), rgb(232, 228, 198), rgb(253, 229, 73));
+
+}
+.second{
+    background: linear-gradient(rgb(132, 167, 244), rgb(57, 117, 247), rgb(132, 167, 244), rgb(57, 117, 247));
+}
+.second h1{
+    color: whitesmoke;
+}
+.second p{
+    color: whitesmoke;
+}
+.third{
+    background: linear-gradient(rgb(251, 192, 202), rgb(248, 209, 215), rgb(251, 192, 202));
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: white;
+    border-radius: 2px;
+    outline: none;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: orangered;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .slider-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: orangered;
+    border-radius: 5px;
+    pointer-events: none; 
+  }
+  .counter {
+    font-size: 20px;
+  }
+  
+  .alloc .row .line{
+    width: 100%;
+    height: 2px;
+    background-color: whitesmoke;
+  }
+  .alloc .row span{
+    font-size: 10px;
+  }

