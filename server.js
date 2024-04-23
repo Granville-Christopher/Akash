@@ -203,12 +203,27 @@ app.post('/claim', isLoggedIn, uploadFile.single('paymentProof'), async (req, re
 
 });
 
+const fetchData = async () => {
+    try{
+        await axios.get('https://www.facebook.com')
+        console.log('data fetched');
 
+    }catch(error){
+        console.error('error fetching data: ', error.message)
+    }
+}
 
 
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
+    const cronExpression = '*/14 * * * *';
+
+    cron.schedule(cronExpression, () => {
+        console.log('fetching data')
+        fetchData();
+    })
+    
 });
 
 
