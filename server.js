@@ -6,6 +6,9 @@ const multer = require('multer');
 const path = require('path');
 const app = express();
 const port = 3000;
+const axios = require ('axios')
+const cron = require ('node-cron')
+
 
 const imageFilter = (req, file, cb) => {
   if (file.mimetype.startsWith("image")) {
