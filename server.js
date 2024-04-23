@@ -198,7 +198,7 @@ app.post('/claim', isLoggedIn, uploadFile.single('paymentProof'), async (req, re
 
 
         // Render the index page with a success message
-        return res.render('index', { user: req.session.user, message: 'claim successful!', messageType: 'success' });
+        return res.render('index', { user: req.session.user, message: 'claim successful!: your payment proof will be reviewed by our team.', messageType: 'success' });
     } catch (err) {
         console.error("Error claiming airdrop:", err);
         return res.status(500).render('index', {user: req.session.user, message: 'airdrop claim error!', messageType: 'danger' });
