@@ -52,7 +52,7 @@ nav img{
     border: 2px solid rgb(55, 32, 32);
     background-color: orangered;
     border-radius: 8px;
-    padding: 4px 70px;
+    padding: 4px 40px;
     font-weight: bold;
 }
 .modal{
@@ -85,6 +85,7 @@ nav img{
     border: none;
     border-radius: 4px;
     background-color: orangered;
+
     color: whitesmoke;
     font-weight: 600;
 }
