@@ -95,7 +95,7 @@
                                 <div class="slider-fill" id="sliderFill"></div>
                             </div>
                             <div class="dollar-counter" id="dollarCounter">Gas fee: $ 15</div>
-                            <div class="met-counter" id="metCounter">$AKT Token Value: $0.00</div>
+                            <!-- <div class="met-counter" id="metCounter">$AKT Token Value: $0.00</div> -->
                             <div class="claim">
                                 <button onclick="openpay()" type="button" data-bs-toggle="modal"
                                     data-bs-target="#airdropModal">
@@ -355,7 +355,7 @@
         // Update $MET token counter
         const metTokenPrice = 3.9; // Price of $MET token per one
         const metValue = metTokenPrice * currentValue;
-        metCounter.textContent = '$AKT Token Value: $' + metValue.toFixed(2);
+        // metCounter.textContent = '$AKT Token Value: $' + metValue.toFixed(2);
     }
 
     // Function to handle claiming airdrop
