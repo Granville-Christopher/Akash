@@ -100,7 +100,7 @@ app.post('/register', async (req, res) => {
         };
         if (!passwordRegex.test(req.body.password)) {
             req.body.email = ''
-            return res.render('index', { user: req.body, message: 'Password must contain at least one uppercase letter and one digit  and must be at least 8 in numbers', messageType: 'danger' });
+            return res.render('index', { user: req.body, message: 'Password must contain at least one uppercase letter and one digit  and must be at least 8 in numbers...!!! no special characters', messageType: 'danger' });
         }
 
         if (!emailRegex.test(req.body.email)) {
